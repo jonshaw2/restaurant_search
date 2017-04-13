@@ -1,0 +1,9 @@
+<p>{{search_results.length}} results found.</p>
+
+<ul>
+  {{#each search_results}}
+    <li><a href="/restaurant/{{id}}" target="_blank">{{name}}</a></li>
+  {{/each}}
+</ul>
+
+<a href="/">Search Again</a>

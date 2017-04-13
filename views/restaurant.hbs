@@ -1,0 +1,28 @@
+<div class = "restaurant_information">
+  <h1>{{restaurant_info.name}}</h1>
+<!-- id: {{restaurant_info.id}} <br> -->
+address: {{restaurant_info.address}}<br>
+category: {{restaurant_info.category}}<br>
+</div>
+
+{{#each restaurant_critic}} <br>
+Title: {{title}}<br>
+Reviewer: {{name}}<br>
+
+Stars: {{stars}}<br>
+Review: {{review}}<br>
+
+  <!-- reviewer.name, review.title, review.stars, review.review -->
+{{/each}}
+<br><br><br>
+<h2>Write Your Own Review</h2>
+
+<form action="/submit_review/{{restaurant_info.id}}" method="POST">
+  <label>Title:</label>
+  <input type="text" name="review_title"><br><br>
+  <label>Stars:</label>
+  <input type="text" name="review_stars"><br><br>
+  <label>Review:</label><br><br>
+  <textarea name="review_review" cols="50" rows="20"></textarea><br>
+  <button type="submit">Submit</button>
+</form>
