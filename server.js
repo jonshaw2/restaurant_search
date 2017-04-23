@@ -9,7 +9,7 @@ const express = require('express');
 const session = require('express-session');
 const app = express();
 
-const connect_vars = require('./config.js');
+const connect_vars = require('./config/config.js');
 const db = pgp({
   host: connect_vars.host,
   database: connect_vars.database,
